@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".presentation.home.HomeFragment">
 
 
     <TextView
         android:id="@+id/textView3"
+        style="@style/PrimaryTextColor.BoldLarge"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="32dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:gravity="top"
-        android:text="MERHABA, İSİM SOYİSİM"
-        android:textColor="#3DB197"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:text="MERHABA, İSİM SOYİSİM" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,21 +28,19 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/home_imageview_width"
+            android:layout_height="@dimen/home_imageview_height"
             android:src="@drawable/appointment" />
 
         <TextView
             android:id="@+id/textViewAppointment"
-            android:layout_width="wrap_content"
+            style="@style/PrimaryTextColor.BoldLarge"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:text="Aile Hekimi Randevusu"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="Aile Hekimi Randevusu" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,21 +53,19 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/home_imageview_width"
+            android:layout_height="@dimen/home_imageview_height"
             android:src="@drawable/vaccine2" />
 
         <TextView
             android:id="@+id/textViewVaccine"
-            android:layout_width="wrap_content"
+            style="@style/PrimaryTextColor.BoldLarge"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:text="Aşı Randevusu"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="Aşı Randevusu" />
     </LinearLayout>
 
     <LinearLayout
@@ -84,21 +78,18 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/home_imageview_width"
+            android:layout_height="@dimen/home_imageview_height"
             android:src="@drawable/doctor" />
 
         <TextView
             android:id="@+id/textViewDoctor"
+            style="@style/PrimaryTextColor.BoldLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
-            android:text="Aile Hekimim"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
+            android:text="Aile Hekimim" />
 
     </LinearLayout>
 
@@ -112,20 +103,18 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/home_imageview_width"
+            android:layout_height="@dimen/home_imageview_height"
             android:src="@drawable/log_out" />
 
         <TextView
             android:id="@+id/textViewLogOut"
+            style="@style/PrimaryTextColor.BoldLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
-            android:text="Çıkış Yap"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="Çıkış Yap" />
 
     </LinearLayout>
 </LinearLayout>
