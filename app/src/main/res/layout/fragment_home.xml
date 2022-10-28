@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
-        android:background="@drawable/border"
+        android:background="@drawable/border_appointment"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
 
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
-        android:background="@drawable/border2"
+        android:background="@drawable/border_vaccine"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
 
@@ -72,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
-        android:background="@drawable/border5"
+        android:background="@drawable/border_received_appointment"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
 
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
-        android:background="@drawable/border3"
+        android:background="@drawable/border_profile"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
 
@@ -122,7 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/double_extra_large_margin"
-        android:background="@drawable/border4"
+        android:background="@drawable/border_logout"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
 
