@@ -14,7 +14,8 @@
         style="@style/WelcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="@dimen/double_extra_large_margin"
+        android:gravity="bottom"
         android:text="@string/welcome_text" />
 
     <LinearLayout
@@ -71,6 +72,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
+        android:background="@drawable/border5"
+        android:orientation="horizontal"
+        android:padding="@dimen/large_padding">
+
+        <View
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/home_imageview_width"
+            android:layout_height="@dimen/home_imageview_height"
+            android:background="@drawable/past_appointment" />
+
+        <TextView
+            android:id="@+id/textViewPast"
+            style="@style/PrimaryTextColor.BoldLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/vaccine_appointment_received" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_margin"
         android:background="@drawable/border3"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">
@@ -79,16 +105,16 @@
             android:id="@+id/imageView3"
             android:layout_width="@dimen/home_imageview_width"
             android:layout_height="@dimen/home_imageview_height"
-            android:background="@drawable/doctor" />
+            android:background="@drawable/profile" />
 
         <TextView
-            android:id="@+id/textViewDoctor"
+            android:id="@+id/textViewProfile"
             style="@style/PrimaryTextColor.BoldLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/small_margin"
-            android:text="@string/doctor_text" />
+            android:text="@string/profile_text" />
 
     </LinearLayout>
 

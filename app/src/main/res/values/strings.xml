@@ -5,7 +5,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="welcome_text">MERHABA, İSİM SOYİSİM</string>
     <string name="log_out">Çıkış Yap</string>
-    <string name="doctor_text">Aile Hekimim</string>
+    <string name="profile_text">Profilim</string>
+    <string name="vaccine_appointment_received">Alınan Randevular</string>
     <string name="vaccine_appointment">Aşı Randevusu</string>
     <string name="doctor_appointment">Aile Hekimi Randevusu</string>
 </resources>
