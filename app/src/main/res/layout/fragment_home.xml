@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/textViewWelcome"
-        style="@style/WelcomeText"
+        style="@style/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/double_extra_large_margin"
