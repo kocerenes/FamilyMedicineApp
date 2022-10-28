@@ -5,32 +5,31 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/large_padding"
     tools:context=".presentation.home.HomeFragment">
 
 
     <TextView
-        android:id="@+id/textView3"
-        style="@style/PrimaryTextColor.BoldLarge"
+        android:id="@+id/textViewWelcome"
+        style="@style/WelcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:gravity="top"
-        android:text="MERHABA, İSİM SOYİSİM" />
+        android:layout_marginBottom="64dp"
+        android:text="@string/welcome_text" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/small_margin"
         android:background="@drawable/border"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/large_padding">
 
-        <ImageView
+        <View
             android:id="@+id/imageView"
             android:layout_width="@dimen/home_imageview_width"
             android:layout_height="@dimen/home_imageview_height"
-            android:src="@drawable/appointment" />
+            android:background="@drawable/appointment" />
 
         <TextView
             android:id="@+id/textViewAppointment"
@@ -38,24 +37,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/small_margin"
             android:layout_weight="1"
-            android:text="Aile Hekimi Randevusu" />
+            android:text="@string/doctor_appointment" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/small_margin"
         android:background="@drawable/border2"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/large_padding">
 
-        <ImageView
+        <View
             android:id="@+id/imageView2"
             android:layout_width="@dimen/home_imageview_width"
             android:layout_height="@dimen/home_imageview_height"
-            android:src="@drawable/vaccine2" />
+            android:background="@drawable/vaccine2" />
 
         <TextView
             android:id="@+id/textViewVaccine"
@@ -63,24 +62,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/small_margin"
             android:layout_weight="1"
-            android:text="Aşı Randevusu" />
+            android:text="@string/vaccine_appointment" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/small_margin"
         android:background="@drawable/border3"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/large_padding">
 
-        <ImageView
+        <View
             android:id="@+id/imageView3"
             android:layout_width="@dimen/home_imageview_width"
             android:layout_height="@dimen/home_imageview_height"
-            android:src="@drawable/doctor" />
+            android:background="@drawable/doctor" />
 
         <TextView
             android:id="@+id/textViewDoctor"
@@ -88,24 +87,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:text="Aile Hekimim" />
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/doctor_text" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/double_extra_large_margin"
         android:background="@drawable/border4"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/large_padding">
 
-        <ImageView
+        <View
             android:id="@+id/imageView4"
             android:layout_width="@dimen/home_imageview_width"
             android:layout_height="@dimen/home_imageview_height"
-            android:src="@drawable/log_out" />
+            android:background="@drawable/log_out" />
 
         <TextView
             android:id="@+id/textViewLogOut"
@@ -113,8 +112,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:text="Çıkış Yap" />
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/log_out" />
 
     </LinearLayout>
 </LinearLayout>

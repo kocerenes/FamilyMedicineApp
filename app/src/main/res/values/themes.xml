@@ -23,4 +23,10 @@
         <item name="android:textSize">@dimen/double_extra_large_size</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <!-- welcome text style -->
+    <style name="WelcomeText">
+        <item name="android:textSize">@dimen/double_extra_large_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FF03DAC5</item>
+    </style>
 </resources>

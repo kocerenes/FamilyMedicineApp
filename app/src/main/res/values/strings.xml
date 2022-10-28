@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="welcome_text">MERHABA, İSİM SOYİSİM</string>
+    <string name="log_out">Çıkış Yap</string>
+    <string name="doctor_text">Aile Hekimim</string>
+    <string name="vaccine_appointment">Aşı Randevusu</string>
+    <string name="doctor_appointment">Aile Hekimi Randevusu</string>
 </resources>
