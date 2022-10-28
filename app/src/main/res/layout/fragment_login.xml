@@ -10,10 +10,10 @@
     <ImageView
         android:id="@+id/ivMedicine"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="245dp"
         android:layout_gravity="start"
         android:scaleType="fitXY"
-        android:src="@drawable/ailehekimi"
+        android:src="@drawable/ailehekimi2"
         android:contentDescription="@string/iv_content_description"/>
 
     <TextView
