@@ -53,4 +53,17 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#FF03DAC5</item>
     </style>
+
+    <!-- profile text style -->
+    <style name="ProfileText">
+        <item name="android:textSize">@dimen/double_extra_large_size</item>
+        <item name="android:textColor">@color/color_profile</item>
+    </style>
+
+    <!-- profile text style -->
+    <style name="ProfileText.Bold">
+        <item name="android:textSize">@dimen/double_extra_large_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_profile</item>
+    </style>
 </resources>

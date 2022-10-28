@@ -14,4 +14,7 @@
     <color name="color_received_appointment">#6AD3AD</color>
     <color name="color_profile">#00B9E5</color>
     <color name="color_logout">#E50102</color>
+
+    <!-- profile colors -->
+    <color name="profileTextColor">#0099ff</color>
 </resources>
