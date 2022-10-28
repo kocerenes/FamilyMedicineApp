@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/color_appointment"
+    app:cardCornerRadius="@dimen/double_extra_large_margin">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            style="@style/PrimaryTextColor.BoldLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31 Mayıs 3031"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHospitalName"
+            style="@style/PrimaryTextColor.BoldLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Hastanesi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/PrimaryTextColor.Large"
+            android:text="Doktor Ahmet Demir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHospitalName" />
+
+        <TextView
+            android:id="@+id/textViewDoctorOpinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SmallText"
+            android:layout_marginTop="8dp"
+            android:text="Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü Doktor tanısı - Doktor görüşü "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDoctorName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
