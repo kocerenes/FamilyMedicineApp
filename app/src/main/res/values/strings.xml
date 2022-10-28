@@ -9,4 +9,6 @@
     <string name="vaccine_appointment_received">Alınan Randevular</string>
     <string name="vaccine_appointment">Aşı Randevusu</string>
     <string name="doctor_appointment">Aile Hekimi Randevusu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
