@@ -17,4 +17,8 @@ object Versions {
     const val gson = "2.9.0"
     const val runtime = "2.5.1"
     const val extensions = "2.2.0"
+    const val auth = "21.1.0"
+    const val firestore = "24.4.0"
+    const val services = "4.3.14"
+    const val storage = "20.1.0"
 }
