@@ -40,7 +40,7 @@ class RegisterFragment : Fragment() {
 
     private fun register(){
         with(binding){
-            viewModel.register(email = etEmail.text.toString(), password = etPassword.text.toString(),auth)
+            viewModel.register(email = etEmail.text.toString(), password = etPassword.text.toString(),auth,requireView())
         }
     }
 
