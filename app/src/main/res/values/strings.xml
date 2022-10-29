@@ -27,4 +27,10 @@
     <string name="hint_tv_name">Adınızı ve Soyadınızı Giriniz</string>
     <string name="tv_ask_register">Zaten hesabınız var mı?</string>
     <string name="tv_sign_in">Giriş Yap</string>
+
+    <!-- completion doctor date screen-->
+    <string name="doctor_name_surname">Doktor Adı Soyadı</string>
+    <string name="input_date">Tarih Giriniz</string>
+    <string name="describe_your_disease">Rahatsızlığınızı Açıklayınız</string>
+    <string name="get_date">Randevu al</string>
 </resources>
