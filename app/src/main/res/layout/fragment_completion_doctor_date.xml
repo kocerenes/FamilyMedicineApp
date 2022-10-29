@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.completion_doctor_date.CompletionDoctorDateFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="@dimen/double_extra_large_margin"
+        android:layout_marginTop="@dimen/double_extra_large_margin"
+        android:layout_marginRight="@dimen/double_extra_large_margin"
+        android:ems="10"
+        android:hint="@string/doctor_name_surname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvDoctorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="@dimen/double_extra_large_margin"
+        android:layout_marginTop="@dimen/double_extra_large_margin"
+        android:layout_marginRight="@dimen/double_extra_large_margin"
+        android:ems="10"
+        android:hint="@string/input_date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="@dimen/double_extra_large_margin"
+        android:layout_marginTop="@dimen/double_extra_large_margin"
+        android:layout_marginRight="@dimen/double_extra_large_margin"
+        android:ems="10"
+        android:hint="@string/describe_your_disease"
+        android:textAlignment="gravity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvDiseaseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:inputType="text|textMultiLine|textCapSentences"
+            android:textAlignment="gravity"
+            android:gravity="start"
+            android:maxLines="5"
+            android:singleLine="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnTakeDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/extra_large_margin"
+        android:layout_marginTop="@dimen/extra_double_extra_large_margin"
+        android:layout_marginRight="@dimen/extra_large_margin"
+        android:backgroundTint="#56a16c"
+        android:padding="@dimen/medium_padding"
+        android:text="@string/get_date"
+        android:background="@drawable/rounded_login"/>
+
+</LinearLayout>
