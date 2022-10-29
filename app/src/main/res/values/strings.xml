@@ -3,4 +3,36 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="welcome_text">MERHABA, İSİM SOYİSİM</string>
+    <string name="log_out">Çıkış Yap</string>
+    <string name="profile_text">Profilim</string>
+    <string name="vaccine_appointment_received">Alınan Randevular</string>
+    <string name="vaccine_appointment">Aşı Randevusu</string>
+    <string name="doctor_appointment">Aile Hekimi Randevusu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- login screen-->
+    <string name="iv_content_description">Aile Hekimi</string>
+    <string name="tv_app_title">Aile Hekimi Uygulaması</string>
+    <string name="hint_et_email">Email Giriniz</string>
+    <string name="hint_et_password">Şifre Giriniz</string>
+    <string name="hint_et_weight">Kilonuzu Giriniz</string>
+    <string name="hint_et_size">Boyunuzu Giriniz</string>
+    <string name="hint_et_age">Yaşınızı Giriniz</string>
+    <string name="hint_et_dateofbirth">Doğum Tarihinizi Giriniz</string>
+    <string name="hint_et_phone_number">Telefon Numaranızı Giriniz</string>
+    <string name="btn_login">Giriş Yap</string>
+    <string name="tv_ask">Henüz üye olmadınız mı?</string>
+    <string name="tv_sign_up">Kayıt Ol</string>
+    <string name="hint_tv_name">Adınızı ve Soyadınızı Giriniz</string>
+    <string name="tv_ask_register">Zaten üye misiniz?</string>
+    <string name="tv_sign_in">Giriş Yap</string>
+    <string name="btn_continue">Devam et</string>
+
+    <!-- completion doctor date screen-->
+    <string name="doctor_name_surname">Doktor Adı Soyadı</string>
+    <string name="input_date">Tarih Giriniz</string>
+    <string name="describe_your_disease">Rahatsızlığınızı Açıklayınız</string>
+    <string name="get_date">Randevu al</string>
 </resources>

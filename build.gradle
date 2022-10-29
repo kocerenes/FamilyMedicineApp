@@ -4,6 +4,8 @@ buildscript {
     dependencies {
         classpath Libs.Hilt.plugin
         classpath Libs.AndroidX.safeArgs
+        // for Firestore service and storage
+        classpath Libs.Google.services
     }
 }
 

@@ -2,9 +2,9 @@ package com.ekheek.familymedicineapp
 
 import Versions
 
-object Libs{
+object Libs {
 
-    object Gradle{
+    object Gradle {
         const val androidGradlePlugin = "com.android.tools.build:gradle:7.0.0"
     }
 
@@ -26,6 +26,10 @@ object Libs{
     object Google {
         const val material = "com.google.android.material:material:" + Versions.material
         const val gson: String = "com.google.code.gson:gson:" + Versions.gson
+        const val firebase_auth = "com.google.firebase:firebase-auth-ktx:" + Versions.auth
+        const val services = "com.google.gms:google-services:" + Versions.services
+        const val firestore = "com.google.firebase:firebase-firestore-ktx:" + Versions.firestore
+        const val storage = "com.google.gms:google-services:" + Versions.services
     }
 
     object Hilt {
