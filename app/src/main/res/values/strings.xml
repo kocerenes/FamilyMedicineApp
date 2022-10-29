@@ -11,7 +11,8 @@
     <string name="doctor_appointment">Aile Hekimi Randevusu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    //login screen
+
+    <!-- login screen-->
     <string name="iv_content_description">Aile Hekimi</string>
     <string name="tv_app_title">Aile Hekimi Uygulaması</string>
     <string name="hint_et_email">Email Giriniz</string>
@@ -25,8 +26,7 @@
     <string name="tv_ask">Henüz üye olmadınız mı?</string>
     <string name="tv_sign_up">Üye Ol</string>
     <string name="hint_tv_name">Adınızı ve Soyadınızı Giriniz</string>
-    <string name="tv_ask_register">Zaten hesabınız var mı?</string>
-    <string name="tv_sign_in">Giriş Yap</string>
+
     <!-- completion doctor date screen-->
     <string name="doctor_name_surname">Doktor Adı Soyadı</string>
     <string name="input_date">Tarih Giriniz</string>
