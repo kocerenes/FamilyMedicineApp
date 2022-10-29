@@ -25,4 +25,6 @@
     <string name="tv_ask">Henüz üye olmadınız mı?</string>
     <string name="tv_sign_up">Üye Ol</string>
     <string name="hint_tv_name">Adınızı ve Soyadınızı Giriniz</string>
+    <string name="tv_ask_register">Zaten hesabınız var mı?</string>
+    <string name="tv_sign_in">Giriş Yap</string>
 </resources>
