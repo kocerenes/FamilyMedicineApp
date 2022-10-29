@@ -24,8 +24,11 @@
     <string name="hint_et_phone_number">Telefon Numaranızı Giriniz</string>
     <string name="btn_login">Giriş Yap</string>
     <string name="tv_ask">Henüz üye olmadınız mı?</string>
-    <string name="tv_sign_up">Üye Ol</string>
+    <string name="tv_sign_up">Kayıt Ol</string>
     <string name="hint_tv_name">Adınızı ve Soyadınızı Giriniz</string>
+    <string name="tv_ask_register">Zaten üye misiniz?</string>
+    <string name="tv_sign_in">Giriş Yap</string>
+    <string name="btn_continue">Devam et</string>
 
     <!-- completion doctor date screen-->
     <string name="doctor_name_surname">Doktor Adı Soyadı</string>
