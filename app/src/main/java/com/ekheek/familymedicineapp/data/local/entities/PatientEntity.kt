@@ -1,4 +1,4 @@
-package com.ekheek.familymedicineapp.data.local.entites
+package com.ekheek.familymedicineapp.data.local.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
