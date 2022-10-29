@@ -3,23 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/registerFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateFamilyDoctorFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.date_family_doctor.DateFamilyDoctorFragment"
+        android:label="fragment_date_family_doctor"
+        tools:layout="@layout/fragment_date_family_doctor" />
+    <fragment
+        android:id="@+id/completionDoctorDateFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.completion_doctor_date.CompletionDoctorDateFragment"
+        android:label="fragment_completion_doctor_date"
+        tools:layout="@layout/fragment_completion_doctor_date" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
         android:name="com.ekheek.familymedicineapp.presentation.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dateFamilyDoctorFragment"
+            app:destination="@id/dateFamilyDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_takedDateFragment"
+            app:destination="@id/takedDateFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.ekheek.familymedicineapp.presentation.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.ekheek.familymedicineapp.presentation.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/takedDateFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.taked_date.TakedDateFragment"
+        android:label="fragment_taked_date"
+        tools:layout="@layout/fragment_taked_date" />
 </navigation>
