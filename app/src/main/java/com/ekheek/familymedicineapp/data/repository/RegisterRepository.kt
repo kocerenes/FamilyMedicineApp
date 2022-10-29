@@ -1,7 +1,6 @@
 package com.ekheek.familymedicineapp.data.repository
 
-import android.content.ContentValues.TAG
-import android.util.Log
+
 import android.view.View
 import androidx.navigation.Navigation
 import com.ekheek.familymedicineapp.presentation.register.RegisterFragmentDirections
@@ -16,9 +15,7 @@ class RegisterRepository() {
                 if (task.isSuccessful) {
                     val action =
                         RegisterFragmentDirections.actionRegisterFragmentToContinueRegisterFragment()
-                        Navigation.findNavController(view).navigate(action)
-                } else {
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Navigation.findNavController(view).navigate(action)
                 }
             }
     }
