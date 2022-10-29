@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.ekheek.familymedicineapp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -22,6 +23,18 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navigateToRegisterPage()
+    }
+
+    private fun navigateToRegisterPage() = binding.tvSignUp.apply {
+        this.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {
