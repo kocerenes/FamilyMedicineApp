@@ -1,12 +1,10 @@
 package com.ekheek.familymedicineapp.presentation.profile
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.ekheek.familymedicineapp.R
+import androidx.fragment.app.Fragment
 import com.ekheek.familymedicineapp.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -25,15 +23,6 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        navigateToHomeScreen()
-    }
-
-    private fun navigateToHomeScreen() {
-        findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
     }
 
     override fun onDestroyView() {

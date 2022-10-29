@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.RegisterFragment"
@@ -21,18 +21,6 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.ekheek.familymedicineapp.presentation.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/dateFamilyDoctorFragment"
@@ -48,9 +36,28 @@
         android:id="@+id/profileFragment"
         android:name="com.ekheek.familymedicineapp.presentation.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_profileFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dateFamilyDoctorFragment"
+            app:destination="@id/dateFamilyDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_takedDateFragment"
+            app:destination="@id/takedDateFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/takedDateFragment"
+        android:name="com.ekheek.familymedicineapp.presentation.taked_date.TakedDateFragment"
+        android:label="fragment_taked_date"
+        tools:layout="@layout/fragment_taked_date" />
 </navigation>
