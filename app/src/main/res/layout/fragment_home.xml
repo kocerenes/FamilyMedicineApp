@@ -14,7 +14,7 @@
         style="@style/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/double_extra_large_margin"
+        android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
         android:gravity="bottom"
         android:text="@string/welcome_text" />
 
@@ -121,7 +121,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/double_extra_large_margin"
+        android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
         android:background="@drawable/border_logout"
         android:orientation="horizontal"
         android:padding="@dimen/large_padding">

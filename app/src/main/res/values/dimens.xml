@@ -16,7 +16,8 @@
     <dimen name="double_extra_small_padding">5dp</dimen>
 
     <!-- Margin -->
-    <dimen name="double_extra_large_margin">26dp</dimen>
+    <dimen name="extra_double_extra_large_margin">26dp</dimen>
+    <dimen name="double_extra_large_margin">22dp</dimen>
     <dimen name="extra_large_margin">18dp</dimen>
     <dimen name="large_margin">16dp</dimen>
     <dimen name="medium_margin">12dp</dimen>
