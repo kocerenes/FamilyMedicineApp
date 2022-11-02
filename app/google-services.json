@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "771192641879",
+    "project_id": "familymedicineproject-1eb56",
+    "storage_bucket": "familymedicineproject-1eb56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771192641879:android:ed7c94b4f929ef17190612",
+        "android_client_info": {
+          "package_name": "com.ekheek.familymedicineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771192641879-j14p7lkmjcgfi5sfffba8urq3mgld02v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpcSdVrZUelVeMVi1zTEubg9iUYdczGg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771192641879-j14p7lkmjcgfi5sfffba8urq3mgld02v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
