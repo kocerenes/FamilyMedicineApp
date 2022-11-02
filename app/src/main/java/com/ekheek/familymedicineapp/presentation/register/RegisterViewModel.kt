@@ -2,13 +2,29 @@ package com.ekheek.familymedicineapp.presentation.register
 
 import android.view.View
 import androidx.lifecycle.ViewModel
-import com.ekheek.familymedicineapp.data.repository.RegisterRepository
+import androidx.navigation.Navigation
+import com.ekheek.familymedicineapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class RegisterViewModel: ViewModel() {
+class RegisterViewModel : ViewModel() {
 
-    private var repository: RegisterRepository = RegisterRepository()
-    fun register(email: String,password: String, auth: FirebaseAuth,view: View){
-        repository.register(email,password,auth,view)
+    fun register(
+        email: String,
+        password: String,
+        auth: FirebaseAuth,
+        view: View,
+        binding: FragmentRegisterBinding
+    ) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener() { task ->
+                if (task.isSuccessful) {
+                    val action =
+                        RegisterFragmentDirections.actionRegisterFragmentToContinueRegisterFragment()
+                    Navigation.findNavController(view).navigate(action)
+                } else {
+                    binding.progressBar.visibility = View.GONE
+                    binding.linearLayout.visibility = View.VISIBLE
+                }
+            }
     }
 }

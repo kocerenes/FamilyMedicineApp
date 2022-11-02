@@ -28,6 +28,8 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding.progressBar.visibility = View.GONE
+        binding.linearLayout.visibility = View.VISIBLE
         return binding.root
     }
 
@@ -38,9 +40,17 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun register(){
-        with(binding){
-            viewModel.register(email = etEmail.text.toString(), password = etPassword.text.toString(),auth,requireView())
+    private fun register() {
+        with(binding) {
+            binding.progressBar.visibility = View.VISIBLE
+            binding.linearLayout.visibility = View.GONE
+            viewModel.register(
+                email = etEmail.text.toString(),
+                password = etPassword.text.toString(),
+                auth,
+                requireView(),
+                binding
+            )
         }
     }
 
