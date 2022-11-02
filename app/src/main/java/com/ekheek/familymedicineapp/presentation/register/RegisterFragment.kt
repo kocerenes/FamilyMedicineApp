@@ -42,8 +42,8 @@ class RegisterFragment : Fragment() {
 
     private fun register() {
         with(binding) {
-            binding.progressBar.visibility = View.VISIBLE
-            binding.linearLayout.visibility = View.GONE
+            progressBar.visibility = View.VISIBLE
+            linearLayout.visibility = View.GONE
             viewModel.register(
                 email = etEmail.text.toString(),
                 password = etPassword.text.toString(),
