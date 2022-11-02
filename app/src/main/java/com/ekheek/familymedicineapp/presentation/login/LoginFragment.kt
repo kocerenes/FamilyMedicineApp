@@ -40,13 +40,13 @@ class LoginFragment : Fragment() {
         observeProgressBar()
     }
 
-    private fun navigateToHomePage() = binding.btnLogin.apply {
-        this.setOnClickListener {
+    private fun navigateToHomePage() = binding.apply {
+        btnLogin.setOnClickListener {
             viewModel.login(
-                binding.etEmail.text.toString(),
-                binding.etPassword.text.toString(),
+              etEmail.text.toString(),
+              etPassword.text.toString(),
                 auth,
-                this
+                requireView()
             )
         }
     }
@@ -75,5 +75,3 @@ class LoginFragment : Fragment() {
         _binding = null
     }
 }
-
-
