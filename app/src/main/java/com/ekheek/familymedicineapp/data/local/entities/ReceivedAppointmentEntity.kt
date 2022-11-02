@@ -1,21 +1,18 @@
-package com.ekheek.familymedicineapp.data.local.entites
+package com.ekheek.familymedicineapp.data.local.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "appointments")
-data class AppointmentEntity(
+// alınabilir, açık randevu
+@Entity(tableName = "received_appointments")
+data class ReceivedAppointmentEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     @ColumnInfo(name = "patientId")
     val patientId: Int,
-    @ColumnInfo(name = "doctorName")
-    val doctorName: String,
-    @ColumnInfo(name = "date")
-    val date: String,
-    @ColumnInfo(name = "time")
-    val time: String,
+    @ColumnInfo(name = "available_appointments")
+    val availableAppointments: List<AvailableAppointmentEntity>,
     @ColumnInfo(name = "patientComplaints")
     val patientComplaints: String // hasta şikayeti
 )
