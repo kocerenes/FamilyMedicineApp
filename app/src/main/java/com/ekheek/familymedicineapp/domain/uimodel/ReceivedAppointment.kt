@@ -1,10 +1,8 @@
 package com.ekheek.familymedicineapp.domain.uimodel
 
-data class AppointmentUIModel(
-    val id: String,
+data class ReceivedAppointment(
+    val id: Int,
     val patientId: Int,
-    val doctorName: String,
-    val date: String,
-    val time: String,
+    val availableAppointments: List<AvailableAppointment>,
     val patientComplaints: String // hasta şikayeti
 )

@@ -10,7 +10,9 @@ import com.ekheek.familymedicineapp.databinding.FragmentRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
@@ -28,6 +30,8 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding.progressBar.visibility = View.GONE
+        binding.linearLayout.visibility = View.VISIBLE
         return binding.root
     }
 
@@ -38,9 +42,17 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun register(){
-        with(binding){
-            viewModel.register(email = etEmail.text.toString(), password = etPassword.text.toString(),auth,requireView())
+    private fun register() {
+        with(binding) {
+            progressBar.visibility = View.VISIBLE
+            linearLayout.visibility = View.GONE
+            viewModel.register(
+                email = etEmail.text.toString(),
+                password = etPassword.text.toString(),
+                auth,
+                requireView(),
+                binding
+            )
         }
     }
 
