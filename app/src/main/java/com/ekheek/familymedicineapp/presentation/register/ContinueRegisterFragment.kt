@@ -38,9 +38,7 @@ class ContinueRegisterFragment : Fragment() {
     private fun onClickBtnLogin() = binding.btnLogin.setOnClickListener {
         createPatientProfile()
         val action =
-            ContinueRegisterFragmentDirections.actionContinueRegisterFragmentToProfileFragment(
-                patientId
-            )
+            ContinueRegisterFragmentDirections.actionContinueRegisterFragmentToHomeFragment()
         Navigation.findNavController(it).navigate(action)
     }
 
