@@ -66,7 +66,14 @@ class TakedDateFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvAppointment.adapter = takedDateAdapter
         takedDateAdapter.appointments = appointmentFromFirebase
-        binding.rvAppointment.visibility = View.VISIBLE
-        binding.progressBar.visibility = View.INVISIBLE
+        if (appointmentFromFirebase.isNullOrEmpty()) {
+            binding.tvError.visibility = View.VISIBLE
+            binding.ivError.visibility = View.VISIBLE
+            binding.rvAppointment.visibility = View.INVISIBLE
+            binding.progressBar.visibility = View.INVISIBLE
+        } else {
+            binding.rvAppointment.visibility = View.VISIBLE
+            binding.progressBar.visibility = View.INVISIBLE
+        }
     }
 }

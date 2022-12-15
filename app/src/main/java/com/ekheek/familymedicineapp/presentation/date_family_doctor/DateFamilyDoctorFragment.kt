@@ -72,8 +72,5 @@ class DateFamilyDoctorFragment : Fragment() {
                 binding.progressBar.visibility = View.INVISIBLE
                 binding.linear1.visibility = View.VISIBLE
             }
-            .addOnFailureListener { e ->
-                println(e.localizedMessage)
-            }
     }
 }
