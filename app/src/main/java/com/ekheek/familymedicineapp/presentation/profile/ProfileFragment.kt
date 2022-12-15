@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.ekheek.familymedicineapp.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,7 +19,6 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
-    private val viewModel: ProfileViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        bindUI()
+        getProfileData()
         return binding.root
     }
 
@@ -41,17 +41,27 @@ class ProfileFragment : Fragment() {
     }
 
     private fun getProfileData() {
-        auth.currentUser?.let { viewModel.getData(it.uid) }
+        val db = Firebase.firestore
+        db.collection("patients")
+            .whereEqualTo("id", auth.currentUser!!.uid)
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    bindUI(document)
+                }
+            }
+            .addOnFailureListener { exception ->
+                println(exception.localizedMessage)
+            }
     }
 
-    private fun bindUI() {
-        getProfileData()
-        viewModel.patient.observe(viewLifecycleOwner) { patient ->
-            binding.textViewName.text = patient.name
-            binding.textView7.text = auth.currentUser?.email
-            binding.textView8.text = patient.phoneNumber
-            binding.textView9.text = patient.height
-            binding.textView10.text = patient.weight
-        }
+    private fun bindUI(document: QueryDocumentSnapshot) {
+        binding.layout1.visibility = View.VISIBLE
+        binding.progressBar.visibility = View.INVISIBLE
+        binding.textViewName.text = document.data["name"] as String
+        binding.textView7.text = auth.currentUser?.email
+        binding.textView8.text = document.data["phoneNumber"] as String
+        binding.textView9.text = document.data["height"] as String
+        binding.textView10.text = document.data["weight"] as String
     }
 }

@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
-import com.ekheek.familymedicineapp.data.local.entities.PatientEntity
 import com.ekheek.familymedicineapp.databinding.FragmentContinueRegisterBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,7 +19,6 @@ class ContinueRegisterFragment : Fragment() {
     private val args: ContinueRegisterFragmentArgs by navArgs()
     private var _binding: FragmentContinueRegisterBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ContinueRegisterViewModel by viewModels()
     private lateinit var patientId: String
 
     override fun onCreateView(
@@ -26,34 +26,43 @@ class ContinueRegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentContinueRegisterBinding.inflate(inflater, container, false)
+        onClickBtnLogin()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         patientId = args.patientId
-        onClickBtnLogin()
     }
 
     private fun onClickBtnLogin() = binding.btnLogin.setOnClickListener {
-        createPatientProfile()
-        val action =
-            ContinueRegisterFragmentDirections.actionContinueRegisterFragmentToHomeFragment()
-        Navigation.findNavController(it).navigate(action)
+        binding.progressBar.visibility = View.VISIBLE
+        binding.linear1.visibility = View.INVISIBLE
+        createPatientProfile(it)
     }
 
-    private fun createPatientProfile() {
-        val patientId = args.patientId
-        with(binding) {
-            val patientProfile = PatientEntity(
-                id = patientId,
-                name = tvName.text.toString(),
-                weight = tvWeight.text.toString(),
-                height = tvSize.text.toString(),
-                age = tvAge.text.toString(),
-                phoneNumber = tvPhoneNumber.text.toString()
-            )
-            viewModel.addPatient(patientProfile)
-        }
+    private fun createPatientProfile(view: View) {
+        val db = Firebase.firestore
+        val patient = hashMapOf(
+            "id" to patientId,
+            "name" to binding.tvName.text.toString(),
+            "phoneNumber" to binding.tvPhoneNumber.text.toString(),
+            "height" to binding.tvSize.text.toString(),
+            "weight" to binding.tvWeight.text.toString(),
+        )
+        db.collection("patients")
+            .add(patient)
+            .addOnSuccessListener { documentReference ->
+                val action =
+                    ContinueRegisterFragmentDirections.actionContinueRegisterFragmentToHomeFragment()
+                Navigation.findNavController(view).navigate(action)
+                Toast.makeText(context, "Profiliniz Başarıyla Oluşturuldu", Toast.LENGTH_LONG)
+                    .show()
+                binding.progressBar.visibility = View.INVISIBLE
+                binding.linear1.visibility = View.VISIBLE
+            }
+            .addOnFailureListener { e ->
+                println(e.localizedMessage)
+            }
     }
 }
