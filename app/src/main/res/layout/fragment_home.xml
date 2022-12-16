@@ -57,32 +57,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_vaccine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:background="@drawable/border_vaccine"
-                android:orientation="horizontal"
-                android:padding="@dimen/large_padding">
-
-                <View
-                    android:id="@+id/imageView2"
-                    android:layout_width="@dimen/home_imageview_width"
-                    android:layout_height="@dimen/home_imageview_height"
-                    android:background="@drawable/vaccine2" />
-
-                <TextView
-                    android:id="@+id/textViewVaccine"
-                    style="@style/PrimaryTextColor.BoldLarge"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/small_margin"
-                    android:layout_weight="1"
-                    android:text="@string/vaccine_appointment" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/layout_taked_dates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
