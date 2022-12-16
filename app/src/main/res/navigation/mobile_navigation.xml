@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.RegisterFragment"
@@ -23,10 +23,13 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/dateFamilyDoctorFragment"
@@ -62,7 +65,9 @@
             app:destination="@id/dateFamilyDoctorFragment" />
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_homeFragment_to_takedDateFragment"
             app:destination="@id/takedDateFragment" />
@@ -88,7 +93,9 @@
             app:argType="string" />
         <action
             android:id="@+id/action_continueRegisterFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/continueRegisterFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_continueRegisterFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
