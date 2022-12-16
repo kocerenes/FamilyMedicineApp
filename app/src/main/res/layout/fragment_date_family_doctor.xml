@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".presentation.date_family_doctor.DateFamilyDoctorFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
+            android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -18,14 +20,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/small_margin"
                 android:layout_marginTop="@dimen/small_margin"
-                android:layout_marginStart="@dimen/small_margin">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/doctor"/>
+                    android:src="@drawable/doctor" />
 
                 <TextView
                     android:id="@+id/familyDoctorNameTextView"
@@ -42,14 +45,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/small_margin"
                 android:layout_marginTop="@dimen/small_margin"
-                android:layout_marginStart="@dimen/small_margin">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/hospital"/>
+                    android:src="@drawable/hospital" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -60,15 +64,16 @@
                     android:text="KOCAELİ İZMİT ERENELER AKÇAKOCA AİLE SAĞLIĞI MEKREZİ"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/small_margin"
                 android:layout_marginTop="@dimen/small_margin"
-                android:layout_marginStart="@dimen/small_margin">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/medicineUnitImageView"
                     android:layout_width="50dp"
@@ -85,31 +90,32 @@
                     android:text="KOCAELİ İZMİT 37 NOLU AİLE HEKİMLİĞİ BİRİMİ"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/small_margin"
                 android:layout_marginTop="@dimen/small_margin"
-                android:layout_marginStart="@dimen/small_margin">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/locationImageView"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_location_24"/>
+                    android:src="@drawable/ic_location_24" />
 
                 <TextView
                     android:id="@+id/medicineAddressTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxLines="2"
                     android:ellipsize="end"
+                    android:maxLines="2"
                     android:text="ERENLER MAHALLESİ KAZIM ERTAN CADDESİ"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
@@ -117,16 +123,30 @@
                 android:id="@+id/datePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:datePickerMode="calendar"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/small_margin"
-                android:layout_gravity="center"/>
+                android:datePickerMode="calendar" />
 
             <Button
                 android:id="@+id/btnTakeAppointment"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Take Appointment"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:text="Take Appointment" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

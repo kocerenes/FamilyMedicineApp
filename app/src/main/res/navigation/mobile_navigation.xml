@@ -8,7 +8,7 @@
         android:id="@+id/registerFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -20,7 +20,7 @@
         android:id="@+id/loginFragment"
         android:name="com.ekheek.familymedicineapp.presentation.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -32,7 +32,11 @@
         android:id="@+id/dateFamilyDoctorFragment"
         android:name="com.ekheek.familymedicineapp.presentation.date_family_doctor.DateFamilyDoctorFragment"
         android:label="fragment_date_family_doctor"
-        tools:layout="@layout/fragment_date_family_doctor" />
+        tools:layout="@layout/fragment_date_family_doctor">
+        <action
+            android:id="@+id/action_dateFamilyDoctorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/completionDoctorDateFragment"
         android:name="com.ekheek.familymedicineapp.presentation.completion_doctor_date.CompletionDoctorDateFragment"
@@ -42,7 +46,7 @@
         android:id="@+id/profileFragment"
         android:name="com.ekheek.familymedicineapp.presentation.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <argument
             android:name="patientId"
             app:argType="string"
@@ -52,7 +56,7 @@
         android:id="@+id/homeFragment"
         android:name="com.ekheek.familymedicineapp.presentation.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_dateFamilyDoctorFragment"
             app:destination="@id/dateFamilyDoctorFragment" />
@@ -75,7 +79,7 @@
         android:id="@+id/continueRegisterFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.ContinueRegisterFragment"
         android:label="fragment_continue_register"
-        tools:layout="@layout/fragment_continue_register" >
+        tools:layout="@layout/fragment_continue_register">
         <action
             android:id="@+id/action_continueRegisterFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
