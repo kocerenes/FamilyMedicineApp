@@ -35,4 +35,10 @@
     <string name="input_date">Tarih Giriniz</string>
     <string name="describe_your_disease">Rahatsızlığınızı Açıklayınız</string>
     <string name="get_date">Randevu al</string>
+
+    <!-- logged out-->
+    <string name="log_out_question">Çıkış yapmak istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="logged_out_successfully">Başarıyla çıkış yapıldı!</string>
 </resources>

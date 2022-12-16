@@ -1,154 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="@dimen/large_padding"
-        tools:context=".presentation.home.HomeFragment">
-
-        <TextView
-            android:id="@+id/textViewWelcome"
-            style="@style/TitleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
-            android:gravity="bottom"
-            android:text="@string/welcome_text" />
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/layout_date_family_doctor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:background="@drawable/border_appointment"
-            android:orientation="horizontal"
-            android:padding="@dimen/large_padding">
-
-            <View
-                android:id="@+id/imageView"
-                android:layout_width="@dimen/home_imageview_width"
-                android:layout_height="@dimen/home_imageview_height"
-                android:background="@drawable/appointment" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/large_padding"
+            tools:context=".presentation.home.HomeFragment">
 
             <TextView
-                android:id="@+id/textViewAppointment"
-                style="@style/PrimaryTextColor.BoldLarge"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/small_margin"
-                android:layout_weight="1"
-                android:text="@string/doctor_appointment" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_vaccine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:background="@drawable/border_vaccine"
-            android:orientation="horizontal"
-            android:padding="@dimen/large_padding">
-
-            <View
-                android:id="@+id/imageView2"
-                android:layout_width="@dimen/home_imageview_width"
-                android:layout_height="@dimen/home_imageview_height"
-                android:background="@drawable/vaccine2" />
-
-            <TextView
-                android:id="@+id/textViewVaccine"
-                style="@style/PrimaryTextColor.BoldLarge"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/small_margin"
-                android:layout_weight="1"
-                android:text="@string/vaccine_appointment" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_taked_dates"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:background="@drawable/border_received_appointment"
-            android:orientation="horizontal"
-            android:padding="@dimen/large_padding">
-
-            <View
-                android:id="@+id/imageView5"
-                android:layout_width="@dimen/home_imageview_width"
-                android:layout_height="@dimen/home_imageview_height"
-                android:background="@drawable/past_appointment" />
-
-            <TextView
-                android:id="@+id/textViewPast"
-                style="@style/PrimaryTextColor.BoldLarge"
+                android:id="@+id/textViewWelcome"
+                style="@style/TitleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/small_margin"
-                android:text="@string/vaccine_appointment_received" />
+                android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
+                android:gravity="bottom"
+                android:text="@string/welcome_text" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:background="@drawable/border_profile"
-            android:orientation="horizontal"
-            android:padding="@dimen/large_padding">
-
-            <View
-                android:id="@+id/imageView3"
-                android:layout_width="@dimen/home_imageview_width"
-                android:layout_height="@dimen/home_imageview_height"
-                android:background="@drawable/profile" />
-
-            <TextView
-                android:id="@+id/textViewProfile"
-                style="@style/PrimaryTextColor.BoldLarge"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/layout_date_family_doctor"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/small_margin"
-                android:text="@string/profile_text" />
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="@drawable/border_appointment"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
 
-        </LinearLayout>
+                <View
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/home_imageview_width"
+                    android:layout_height="@dimen/home_imageview_height"
+                    android:background="@drawable/appointment" />
 
-        <LinearLayout
-            android:id="@+id/layout_log_out"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
-            android:background="@drawable/border_logout"
-            android:orientation="horizontal"
-            android:padding="@dimen/large_padding">
+                <TextView
+                    android:id="@+id/textViewAppointment"
+                    style="@style/PrimaryTextColor.BoldLarge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_weight="1"
+                    android:text="@string/doctor_appointment" />
+            </LinearLayout>
 
-            <View
-                android:id="@+id/imageView4"
-                android:layout_width="@dimen/home_imageview_width"
-                android:layout_height="@dimen/home_imageview_height"
-                android:background="@drawable/log_out" />
-
-            <TextView
-                android:id="@+id/textViewLogOut"
-                style="@style/PrimaryTextColor.BoldLarge"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/layout_vaccine"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/small_margin"
-                android:text="@string/log_out" />
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="@drawable/border_vaccine"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
 
+                <View
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/home_imageview_width"
+                    android:layout_height="@dimen/home_imageview_height"
+                    android:background="@drawable/vaccine2" />
+
+                <TextView
+                    android:id="@+id/textViewVaccine"
+                    style="@style/PrimaryTextColor.BoldLarge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_weight="1"
+                    android:text="@string/vaccine_appointment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_taked_dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="@drawable/border_received_appointment"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
+
+                <View
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/home_imageview_width"
+                    android:layout_height="@dimen/home_imageview_height"
+                    android:background="@drawable/past_appointment" />
+
+                <TextView
+                    android:id="@+id/textViewPast"
+                    style="@style/PrimaryTextColor.BoldLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:text="@string/vaccine_appointment_received" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="@drawable/border_profile"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
+
+                <View
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/home_imageview_width"
+                    android:layout_height="@dimen/home_imageview_height"
+                    android:background="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/textViewProfile"
+                    style="@style/PrimaryTextColor.BoldLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:text="@string/profile_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_log_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/extra_double_extra_large_margin"
+                android:background="@drawable/border_logout"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
+
+                <View
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/home_imageview_width"
+                    android:layout_height="@dimen/home_imageview_height"
+                    android:background="@drawable/log_out" />
+
+                <TextView
+                    android:id="@+id/textViewLogOut"
+                    style="@style/PrimaryTextColor.BoldLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:text="@string/log_out" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
