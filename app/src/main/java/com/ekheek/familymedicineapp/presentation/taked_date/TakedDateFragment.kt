@@ -51,11 +51,7 @@ class TakedDateFragment : Fragment() {
                             document.data["medicineAddress"] as String
                         )
                     )
-                    println(document.data["appointmentDate"].toString())
                 }
-            }
-            .addOnFailureListener { exception ->
-                println(exception.localizedMessage)
             }.addOnCompleteListener {
                 bindUI()
             }
