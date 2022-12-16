@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="Muhammet Yılmaz"
+                    android:text="Doktor Muhammet Yılmaz"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
