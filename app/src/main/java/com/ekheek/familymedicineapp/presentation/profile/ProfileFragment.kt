@@ -50,9 +50,6 @@ class ProfileFragment : Fragment() {
                     bindUI(document)
                 }
             }
-            .addOnFailureListener { exception ->
-                println(exception.localizedMessage)
-            }
     }
 
     private fun bindUI(document: QueryDocumentSnapshot) {
