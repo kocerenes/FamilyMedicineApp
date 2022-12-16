@@ -40,16 +40,25 @@ class LoginFragment : Fragment() {
         navigateToRegisterPage()
         navigateToHomePage()
         observeProgressBar()
+        isSignIn()
     }
 
     private fun navigateToHomePage() = binding.apply {
         btnLogin.setOnClickListener {
             viewModel.login(
-              etEmail.text.toString(),
-              etPassword.text.toString(),
+                etEmail.text.toString(),
+                etPassword.text.toString(),
                 auth,
                 requireView()
             )
+        }
+    }
+
+    private fun isSignIn() {
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            findNavController().navigate(action)
         }
     }
 
