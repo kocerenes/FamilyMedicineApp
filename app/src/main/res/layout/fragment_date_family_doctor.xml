@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="KOCAELİ İZMİT ERENELER AKÇAKOCA AİLE SAĞLIĞI MEKREZİ"
+                    android:text="KOCAELİ İZMİT ERENLER AKÇAKOCA AİLE SAĞLIĞI MERKEZİ"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
