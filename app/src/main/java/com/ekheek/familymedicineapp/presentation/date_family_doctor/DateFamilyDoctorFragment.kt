@@ -1,5 +1,6 @@
 package com.ekheek.familymedicineapp.presentation.date_family_doctor
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
+import java.text.SimpleDateFormat
 import java.util.*
 
 @AndroidEntryPoint
@@ -38,7 +40,7 @@ class DateFamilyDoctorFragment : Fragment() {
 
         ) { view, year, month, day ->
             val month = month + 1
-            val msg = "$day/$month/$year"
+            val msg = "$day-$month-$year"
             selectDate = msg
         }
     }
@@ -49,17 +51,19 @@ class DateFamilyDoctorFragment : Fragment() {
         takeAppointment(it)
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun takeAppointment(view: View) {
         val db = Firebase.firestore
         val auth = Firebase.auth
 
+        val date = SimpleDateFormat("dd-MM-yyyy").parse(selectDate)
         val appointment = hashMapOf(
             "id" to auth.currentUser!!.uid,
             "doctorName" to binding.familyDoctorNameTextView.text.toString(),
             "medicineName" to binding.textView2.text.toString(),
             "medicineUnit" to binding.medicineUnitTextView.text.toString(),
             "medicineAddress" to binding.medicineAddressTextView.text.toString(),
-            "appointmentDate" to selectDate,
+            "appointmentDate" to date,
         )
         db.collection("appointments")
             .add(appointment)

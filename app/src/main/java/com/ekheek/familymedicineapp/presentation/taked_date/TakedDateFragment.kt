@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ekheek.familymedicineapp.data.local.entities.Appointment
 import com.ekheek.familymedicineapp.databinding.FragmentTakedDateBinding
 import com.ekheek.familymedicineapp.presentation.taked_date.adapter.TakedDateAdapter
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -45,14 +46,18 @@ class TakedDateFragment : Fragment() {
                 for (document in documents) {
                     appointmentFromFirebase.add(
                         Appointment(
-                            document.data["appointmentDate"] as String,
+                            document.data["appointmentDate"] as Timestamp,
                             document.data["medicineName"] as String,
                             document.data["doctorName"] as String,
                             document.data["medicineAddress"] as String
                         )
                     )
                 }
-            }.addOnCompleteListener {
+            }
+            .addOnFailureListener {
+                println(it.localizedMessage)
+            }
+            .addOnCompleteListener {
                 bindUI()
             }
     }
