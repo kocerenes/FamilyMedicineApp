@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -20,16 +20,28 @@
         android:id="@+id/loginFragment"
         android:name="com.ekheek.familymedicineapp.presentation.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/dateFamilyDoctorFragment"
         android:name="com.ekheek.familymedicineapp.presentation.date_family_doctor.DateFamilyDoctorFragment"
         android:label="fragment_date_family_doctor"
-        tools:layout="@layout/fragment_date_family_doctor" />
+        tools:layout="@layout/fragment_date_family_doctor">
+        <action
+            android:id="@+id/action_dateFamilyDoctorFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/dateFamilyDoctorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/completionDoctorDateFragment"
         android:name="com.ekheek.familymedicineapp.presentation.completion_doctor_date.CompletionDoctorDateFragment"
@@ -39,24 +51,31 @@
         android:id="@+id/profileFragment"
         android:name="com.ekheek.familymedicineapp.presentation.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="patientId"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.ekheek.familymedicineapp.presentation.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_dateFamilyDoctorFragment"
             app:destination="@id/dateFamilyDoctorFragment" />
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_homeFragment_to_takedDateFragment"
             app:destination="@id/takedDateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/takedDateFragment"
@@ -67,9 +86,20 @@
         android:id="@+id/continueRegisterFragment"
         android:name="com.ekheek.familymedicineapp.presentation.register.ContinueRegisterFragment"
         android:label="fragment_continue_register"
-        tools:layout="@layout/fragment_continue_register" >
+        tools:layout="@layout/fragment_continue_register">
         <action
             android:id="@+id/action_continueRegisterFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <argument
+            android:name="patientId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_continueRegisterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/continueRegisterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_continueRegisterFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 </navigation>

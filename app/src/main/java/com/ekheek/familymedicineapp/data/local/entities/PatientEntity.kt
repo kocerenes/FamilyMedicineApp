@@ -6,17 +6,16 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "patients")
 data class PatientEntity(
-    @PrimaryKey(autoGenerate = true) val id: String,
-    @ColumnInfo(name = "first_name")
-    val firstName: String,
-    @ColumnInfo(name = "last_name")
-    val lastName: String,
+    @PrimaryKey
+    val id: String,
+    @ColumnInfo(name = "name")
+    val name: String,
     @ColumnInfo(name = "phone_number")
     val phoneNumber: String,
     @ColumnInfo(name = "weight")
-    val weight: Double,
+    val weight: String,
     @ColumnInfo(name = "height")
-    val height: Double,
+    val height: String,
     @ColumnInfo(name = "age")
-    val age: Int
+    val age: String
 )
