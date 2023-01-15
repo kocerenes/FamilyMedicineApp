@@ -2,6 +2,10 @@
 
 ##  App Screenshots
 
+| login screen | home screen | appointment screen | appointments screen | profile screen |
+|:-:|:-:|:-:|:-:|:-:|
+| <img src="https://raw.githubusercontent.com/kocerenes/FamilyMedicineApp/master/screenshots/login_ss.png" alt="drawing" width="250"/> | <img src="https://raw.githubusercontent.com/kocerenes/FamilyMedicineApp/master/screenshots/home_ss.png" alt="drawing" width="250"/> | <img src="https://raw.githubusercontent.com/kocerenes/FamilyMedicineApp/master/screenshots/randevu_ss.png" alt="drawing" width="250"/> | <img src="https://raw.githubusercontent.com/kocerenes/FamilyMedicineApp/master/screenshots/randevular_ss.png" width="250"/> | <img src="https://raw.githubusercontent.com/kocerenes/FamilyMedicineApp/master/screenshots/profil_ss.png" width="250"/> 
+
  ## Features 🕹
 - 100% Kotlin-only
 - Following MVVM Architectural Design Pattern
